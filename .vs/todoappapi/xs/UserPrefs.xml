@@ -1,0 +1,41 @@
+﻿<Properties StartupConfiguration="{11A29280-F827-4C05-985F-E77B9B28ED8D}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="todoappapi/Repository/MongoRepository.cs">
+    <Files>
+      <File FileName="todoappapi/Entity/todo.cs" Line="9" Column="6" />
+      <File FileName="todoappapi/Repository/ITodoRepository.cs" />
+      <File FileName="todoappapi/Dtos/TodoDto.cs" />
+      <File FileName="todoappapi/Repository/InMemoryTodoRepo.cs" />
+      <File FileName="todoappapi/Controllers/TodoController.cs" />
+      <File FileName="todoappapi/Startup.cs" />
+      <File FileName="todoappapi/Controllers/WeatherForecastController.cs" />
+      <File FileName="todoappapi/Extensions.cs" />
+      <File FileName="todoappapi/appsettings.json" />
+      <File FileName="todoappapi/Dtos/UpdateDto.cs" />
+      <File FileName="todoappapi/Dtos/CreateTodoDto.cs" />
+      <File FileName="todoappapi/Repository/MongoRepository.cs" Line="9" Column="30" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="todoappapi" expanded="True">
+            <Node name="todoappapi" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Dtos" expanded="True" />
+              <Node name="Entity" expanded="True" />
+              <Node name="Repository" expanded="True">
+                <Node name="MongoRepository.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.todoappapi PreferredExecutionTarget="/Applications/Google Chrome.app" />
+</Properties>
