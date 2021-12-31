@@ -15,5 +15,6 @@
     <Folder Include="Entity\" />
     <Folder Include="Repository\" />
     <Folder Include="Dtos\" />
+    <Folder Include="Settings\" />
   </ItemGroup>
 </Project>

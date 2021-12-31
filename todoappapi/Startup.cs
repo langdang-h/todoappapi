@@ -11,7 +11,10 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using MongoDB.Bson.Serialization;
+using MongoDB.Driver;
 using todoappapi.Repository;
+using todoappapi.Settings;
 
 namespace todoappapi
 {
@@ -27,8 +30,16 @@ namespace todoappapi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+  
 
-            services.AddSingleton<ITodoRepository, InMemoryTodoRepo>();
+
+            services.AddSingleton<IMongoClient>(serviceProvider =>
+            {
+                var settings = Configuration.GetSection(nameof(MongoDbSettings)).Get<MongoDbSettings>();
+                return new MongoClient(settings.ConnectionString);
+            });
+
+            services.AddSingleton<ITodoRepository, MongoTodoRepository>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
