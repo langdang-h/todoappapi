@@ -17,4 +17,9 @@
     <Folder Include="Dtos\" />
     <Folder Include="Settings\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\todo.shared\todo.shared.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

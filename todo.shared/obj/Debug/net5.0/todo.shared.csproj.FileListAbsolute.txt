@@ -1,0 +1,12 @@
+/Users/lfuller/Projects/todoappapi/todo.shared/bin/Debug/net5.0/todo.shared.deps.json
+/Users/lfuller/Projects/todoappapi/todo.shared/bin/Debug/net5.0/todo.shared.dll
+/Users/lfuller/Projects/todoappapi/todo.shared/bin/Debug/net5.0/ref/todo.shared.dll
+/Users/lfuller/Projects/todoappapi/todo.shared/bin/Debug/net5.0/todo.shared.pdb
+/Users/lfuller/Projects/todoappapi/todo.shared/obj/Debug/net5.0/todo.shared.GeneratedMSBuildEditorConfig.editorconfig
+/Users/lfuller/Projects/todoappapi/todo.shared/obj/Debug/net5.0/todo.shared.AssemblyInfoInputs.cache
+/Users/lfuller/Projects/todoappapi/todo.shared/obj/Debug/net5.0/todo.shared.AssemblyInfo.cs
+/Users/lfuller/Projects/todoappapi/todo.shared/obj/Debug/net5.0/todo.shared.csproj.CoreCompileInputs.cache
+/Users/lfuller/Projects/todoappapi/todo.shared/obj/Debug/net5.0/todo.shared.dll
+/Users/lfuller/Projects/todoappapi/todo.shared/obj/Debug/net5.0/ref/todo.shared.dll
+/Users/lfuller/Projects/todoappapi/todo.shared/obj/Debug/net5.0/todo.shared.pdb
+/Users/lfuller/Projects/todoappapi/todo.shared/obj/Debug/net5.0/todo.shared.csproj.AssemblyReference.cache

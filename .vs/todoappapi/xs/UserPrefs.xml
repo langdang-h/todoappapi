@@ -1,29 +1,32 @@
-﻿<Properties StartupConfiguration="{11A29280-F827-4C05-985F-E77B9B28ED8D}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="todoappapi/Controllers/TodoController.cs">
+﻿<Properties StartupConfiguration="Multiple Projects">
+  <MonoDevelop.Ide.Workbench ActiveDocument="todoclient/Services/ResponseManager.cs">
     <Files>
-      <File FileName="todoappapi/Entity/todo.cs" Line="9" Column="6" />
-      <File FileName="todoappapi/Repository/ITodoRepository.cs" />
-      <File FileName="todoappapi/Dtos/TodoDto.cs" />
-      <File FileName="todoappapi/Repository/InMemoryTodoRepo.cs" />
-      <File FileName="todoappapi/Controllers/TodoController.cs" Line="34" Column="14" />
-      <File FileName="todoappapi/Startup.cs" />
-      <File FileName="todoappapi/Controllers/WeatherForecastController.cs" />
-      <File FileName="todoappapi/Extensions.cs" />
+      <File FileName="todoappapi/Entity/Todo.cs" Line="1" Column="1" />
+      <File FileName="todoclient/Services/ResponseManager.cs" Line="27" Column="33" />
+      <File FileName="todoclient/Properties/launchSettings.json" />
       <File FileName="todoappapi/appsettings.json" />
-      <File FileName="todoappapi/Dtos/UpdateDto.cs" />
-      <File FileName="todoappapi/Dtos/CreateTodoDto.cs" />
+      <File FileName="todoappapi/appsettings.Development.json" />
+      <File FileName="todoappapi/Program.cs" />
+      <File FileName="todoappapi/Startup.cs" />
       <File FileName="todoappapi/Settings/MongoDbSettings.cs" />
+      <File FileName="todoappapi/Properties/launchSettings.json" />
+      <File FileName="todoclient/Program.cs" />
+      <File FileName="todoclient/Models/Todo.cs" />
+      <File FileName="todoclient/Pages/Index.razor" Line="1" Column="1" />
+      <File FileName="todoclient/Pages/Counter.razor" />
+      <File FileName="todoclient/Pages/FetchData.razor" />
+      <File FileName="todoclient/_Imports.razor" />
+      <File FileName="todoappapi/Repository/MongoTodoRepository.cs" />
+      <File FileName="todoappapi/Controllers/TodoController.cs" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="todoappapi" expanded="True">
-            <Node name="todoappapi" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="TodoController.cs" selected="True" />
-              </Node>
-              <Node name="Repository" expanded="True" />
-              <Node name="Settings" expanded="True" />
+            <Node name="todoclient" expanded="True">
+              <Node name="Pages" expanded="True" />
+              <Node name="Services" expanded="True" />
+              <Node name="Shared" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -31,10 +34,18 @@
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.todoclient PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
+  <MultiItemStartupConfigurations>
+    <MultiItemSolutionRunConfiguration Id="Multiple Projects" Name="Multiple Projects">
+      <Items>
+        <StartupItem ItemId="{11A29280-F827-4C05-985F-E77B9B28ED8D}" ItemName="todoappapi" ConfigurationId="Default" />
+        <StartupItem ItemId="{1392D445-F131-44DB-943A-F84BC9BFDE5F}" ItemName="todoclient" ConfigurationId="Default" />
+      </Items>
+    </MultiItemSolutionRunConfiguration>
+  </MultiItemStartupConfigurations>
   <MonoDevelop.Ide.ItemProperties.todoappapi PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

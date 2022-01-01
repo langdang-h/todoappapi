@@ -1,0 +1,36 @@
+﻿@page "/"
+@using todoclient.Services
+@using todoclient.Models
+@inject ResponseManager responseManager
+
+@if (todos == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+        @foreach (var todo in todos)
+        {
+            <li>@todo.title</li>
+        }
+ 
+}
+
+
+<SurveyPrompt Title="How is Blazor working for you?" />
+
+@code{
+    List<Todo> todos;
+
+    async Task LoadTodos()
+    {
+        todos = await responseManager.GetAllEpisodes();
+        await InvokeAsync(StateHasChanged);
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        await LoadTodos();
+    }
+
+} 

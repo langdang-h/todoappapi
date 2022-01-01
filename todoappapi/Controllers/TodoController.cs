@@ -24,6 +24,8 @@ namespace todoappapi.Controllers
         {
             var items = repository.GetTodos().Select(item => item.AsDto());
 
+            Console.WriteLine("A GET REQUEST WAS MADE");
+            Console.WriteLine(items);
             return items;
         }
 

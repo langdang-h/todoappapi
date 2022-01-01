@@ -20,6 +20,8 @@ namespace todoappapi
 {
     public class Startup
     {
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -40,6 +42,16 @@ namespace todoappapi
             });
 
             services.AddSingleton<ITodoRepository, MongoTodoRepository>();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: MyAllowSpecificOrigins,
+                    builder =>
+                    {
+                        builder.WithOrigins("https://localhost:59436");
+                    });
+            });
+
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -63,6 +75,8 @@ namespace todoappapi
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors(MyAllowSpecificOrigins);
 
             app.UseEndpoints(endpoints =>
             {

@@ -354,6 +354,16 @@
             "rid": "win"
           }
         }
+      },
+      "todo.shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/todo.shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/todo.shared.dll": {}
+        }
       }
     }
   },
@@ -953,6 +963,11 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "todo.shared/1.0.0": {
+      "type": "project",
+      "path": "../todo.shared/todo.shared.csproj",
+      "msbuildProject": "../todo.shared/todo.shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -960,23 +975,24 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.0",
       "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 5.0.0",
       "MongoDB.Driver >= 2.14.1",
-      "Swashbuckle.AspNetCore >= 5.6.3"
+      "Swashbuckle.AspNetCore >= 5.6.3",
+      "todo.shared >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "/Users/lang/.nuget/packages/": {}
+    "/Users/lfuller/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/lang/Projects/todoappapi/todoappapi/todoappapi.csproj",
+      "projectUniqueName": "/Users/lfuller/Projects/todoappapi/todoappapi/todoappapi.csproj",
       "projectName": "todoappapi",
-      "projectPath": "/Users/lang/Projects/todoappapi/todoappapi/todoappapi.csproj",
-      "packagesPath": "/Users/lang/.nuget/packages/",
-      "outputPath": "/Users/lang/Projects/todoappapi/todoappapi/obj/",
+      "projectPath": "/Users/lfuller/Projects/todoappapi/todoappapi/todoappapi.csproj",
+      "packagesPath": "/Users/lfuller/.nuget/packages/",
+      "outputPath": "/Users/lfuller/Projects/todoappapi/todoappapi/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/lang/.config/NuGet/NuGet.Config"
+        "/Users/lfuller/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -987,7 +1003,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/lfuller/Projects/todoappapi/todo.shared/todo.shared.csproj": {
+              "projectPath": "/Users/lfuller/Projects/todoappapi/todo.shared/todo.shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -1033,6 +1053,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.NETCore.App.Host.osx-x64",
+            "version": "[5.0.13, 5.0.13]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.AspNetCore.App": {
             "privateAssets": "none"
@@ -1041,7 +1067,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
       }
     }
   }

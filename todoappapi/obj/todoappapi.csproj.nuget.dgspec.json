@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/lang/Projects/todoappapi/todoappapi/todoappapi.csproj": {}
+    "/Users/lfuller/Projects/todoappapi/todoappapi/todoappapi.csproj": {}
   },
   "projects": {
-    "/Users/lang/Projects/todoappapi/todoappapi/todoappapi.csproj": {
+    "/Users/lfuller/Projects/todoappapi/todo.shared/todo.shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/lang/Projects/todoappapi/todoappapi/todoappapi.csproj",
-        "projectName": "todoappapi",
-        "projectPath": "/Users/lang/Projects/todoappapi/todoappapi/todoappapi.csproj",
-        "packagesPath": "/Users/lang/.nuget/packages/",
-        "outputPath": "/Users/lang/Projects/todoappapi/todoappapi/obj/",
+        "projectUniqueName": "/Users/lfuller/Projects/todoappapi/todo.shared/todo.shared.csproj",
+        "projectName": "todo.shared",
+        "projectPath": "/Users/lfuller/Projects/todoappapi/todo.shared/todo.shared.csproj",
+        "packagesPath": "/Users/lfuller/.nuget/packages/",
+        "outputPath": "/Users/lfuller/Projects/todoappapi/todo.shared/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/lang/.config/NuGet/NuGet.Config"
+          "/Users/lfuller/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -26,6 +26,62 @@
           "net5.0": {
             "targetAlias": "net5.0",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/lfuller/Projects/todoappapi/todoappapi/todoappapi.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/lfuller/Projects/todoappapi/todoappapi/todoappapi.csproj",
+        "projectName": "todoappapi",
+        "projectPath": "/Users/lfuller/Projects/todoappapi/todoappapi/todoappapi.csproj",
+        "packagesPath": "/Users/lfuller/.nuget/packages/",
+        "outputPath": "/Users/lfuller/Projects/todoappapi/todoappapi/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/lfuller/.config/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "/Users/lfuller/Projects/todoappapi/todo.shared/todo.shared.csproj": {
+                "projectPath": "/Users/lfuller/Projects/todoappapi/todo.shared/todo.shared.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -71,6 +127,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Host.osx-x64",
+              "version": "[5.0.13, 5.0.13]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -79,7 +141,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/6.0.101/RuntimeIdentifierGraph.json"
         }
       }
     }
