@@ -1,13 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using todoappapi.Dtos;
 using todoappapi.Entity;
 using todoappapi.Repository;
 
 namespace todoappapi.Controllers
-{
+{ 
     [ApiController]
     [Route("[controller]")]
     public class TodoController : ControllerBase
@@ -30,7 +31,7 @@ namespace todoappapi.Controllers
         }
 
         [HttpPost]
-        public ActionResult PostTodo(CreateTodoDto todo)
+        public ActionResult<Todo> PostTodo(CreateTodoDto todo)
         {
             Todo newTodo = new()
             {
@@ -40,8 +41,8 @@ namespace todoappapi.Controllers
             };
 
             repository.AddTodo(newTodo);
-
-            return NoContent();
+            Console.WriteLine("a request was made");
+            return newTodo;
         }
 
 
@@ -61,7 +62,7 @@ namespace todoappapi.Controllers
 
 
         [HttpDelete("{id}")]
-        public ActionResult DeleteTodo(int id)
+        public ActionResult<int> DeleteTodo(int id)
         {
             var item = repository.GetTodo(id);
 
@@ -72,12 +73,14 @@ namespace todoappapi.Controllers
 
             repository.DeleteTodo(id);
 
-            return NoContent();
+            return id;
         }
 
         [HttpPut("{id}")]
-        public ActionResult UpdateTodo(int id, UpdateDto updateDto)
+        public ActionResult<int> UpdateTodo(int id, UpdateDto updateDto)
         {
+            Console.WriteLine(id);
+
             var existingTodo = repository.GetTodo(id);
 
             if(existingTodo is null)
@@ -94,7 +97,7 @@ namespace todoappapi.Controllers
 
             repository.UpdateTodo(todo);
 
-            return NoContent();
+            return todo.id;
         }
 
 

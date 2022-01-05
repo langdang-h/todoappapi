@@ -49,6 +49,8 @@ namespace todoappapi
                     builder =>
                     {
                         builder.WithOrigins("https://localhost:59436");
+                        builder.AllowAnyHeader();
+                        builder.AllowAnyMethod();
                     });
             });
 

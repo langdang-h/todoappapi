@@ -105,9 +105,14 @@ using todoclient.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 22 "/Users/lfuller/Projects/todoappapi/todoclient/Pages/Index.razor"
+#line 43 "/Users/lfuller/Projects/todoappapi/todoclient/Pages/Index.razor"
       
+
     List<Todo> todos;
+
+    public string newTodoTitle { get; set; }
+
+    public int todoId { get; set; }
 
     async Task LoadTodos()
     {
@@ -120,6 +125,39 @@ using todoclient.Models;
         await LoadTodos();
     }
 
+
+    private async Task ChangeTodo()
+    {
+        Console.WriteLine("submitted");
+        var todo = todos.OrderBy(x => x.id).Last();
+        int newId = todo.id + 1;
+        Console.WriteLine(todo.id);
+        TodoDto newTodo = new TodoDto
+        {
+            id = newId,
+            title = newTodoTitle
+        };
+
+        var response = await responseManager.PostTodo(newTodo);
+        todos.Add(response);
+    }
+
+    async Task DeleteTodo(int id )
+    {
+        int responseId = await responseManager.DeleteTodo(id);
+        int index = todos.FindIndex(todo => todo.id == responseId);
+        todos.RemoveAt(index);
+
+    }
+
+    async Task checkbox(Todo todo)
+    {
+        Console.WriteLine(todo.id);
+        int responseId = await responseManager.Checkbox(todo);
+        int index = todos.FindIndex(item => item.id == responseId);
+        todos[index].done = !todo.done; 
+        
+    }
 
 #line default
 #line hidden

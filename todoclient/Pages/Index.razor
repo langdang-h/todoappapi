@@ -3,24 +3,50 @@
 @using todoclient.Models
 @inject ResponseManager responseManager
 
+
+
+<h4>todos: </h4>
 @if (todos == null)
 {
     <p>Loading...</p>
 }
 else
 {
+    
         @foreach (var todo in todos)
         {
-            <li>@todo.title</li>
+
+
+
+<li>
+                @if (todo.done) { <input type="checkbox" @onclick="() => checkbox(todo)" checked> }
+                else{ <input type="checkbox" @onclick="() => checkbox(todo)"> }
+
+                
+                @todo.title
+                <button @onclick="()=> DeleteTodo(todo.id)">x</button>
+                
+
+            </li>
         }
- 
+
 }
+
+<hr />
+<label for="addtodo">add a todo</label>
+<input type="text" id="addtodo" @bind="newTodoTitle" />
+<input type="submit" @onclick="ChangeTodo" />
 
 
 <SurveyPrompt Title="How is Blazor working for you?" />
 
 @code{
+
     List<Todo> todos;
+
+    public string newTodoTitle { get; set; }
+
+    public int todoId { get; set; }
 
     async Task LoadTodos()
     {
@@ -33,4 +59,37 @@ else
         await LoadTodos();
     }
 
+
+    private async Task ChangeTodo()
+    {
+        Console.WriteLine("submitted");
+        var todo = todos.OrderBy(x => x.id).Last();
+        int newId = todo.id + 1;
+        Console.WriteLine(todo.id);
+        TodoDto newTodo = new TodoDto
+        {
+            id = newId,
+            title = newTodoTitle
+        };
+
+        var response = await responseManager.PostTodo(newTodo);
+        todos.Add(response);
+    }
+
+    async Task DeleteTodo(int id )
+    {
+        int responseId = await responseManager.DeleteTodo(id);
+        int index = todos.FindIndex(todo => todo.id == responseId);
+        todos.RemoveAt(index);
+
+    }
+
+    async Task checkbox(Todo todo)
+    {
+        Console.WriteLine(todo.id);
+        int responseId = await responseManager.Checkbox(todo);
+        int index = todos.FindIndex(item => item.id == responseId);
+        todos[index].done = !todo.done; 
+        
+    }
 } 

@@ -197,14 +197,14 @@
       "netstandard.dll": "sha256-4Ejn1oHpeqmTQlJx7Kjuipn0ZVOoG0hGncN+9qyL1lo=",
       "System.Private.CoreLib.dll": "sha256-7n\/jioZu+\/2tD7v1RgjTTrBrviX+kVwPFGJ\/JBsHQGA=",
       "todo.shared.dll": "sha256-R1feHPhaJeGunDhpj9PP8\/ILJ1cdERSx8uKXXzIP9c8=",
-      "todoclient.dll": "sha256-DEr0ksJafRd6p\/5KMY2C8aIEJm+E54klfOEpmpUaKnc="
+      "todoclient.dll": "sha256-mMK957xYmWU3dSeC4ebTNxxioLIVbkmnSJRcYRMcAxM="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
       "todo.shared.pdb": "sha256-HfZ\/ySZRJHLSmprElmy3ISa9kYUwChYELGlGzGHd9kM=",
-      "todoclient.pdb": "sha256-4BzsHR5pwSYE1ixDIj0RzjQWBGZarnjY3A39GZ4fVIU="
+      "todoclient.pdb": "sha256-KpPH9WMKRG2KUJrfFFZh9geTgkkEkj4shlfz+ORpArw="
     },
     "runtime": {
       "dotnet.timezones.blat": "sha256-Uv0JiOiPEvlGxygIhcdY8XYm\/Nt+zgVckKrqB2uih0w=",
